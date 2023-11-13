@@ -11,11 +11,12 @@ public class Consumidor extends Thread{
     @Override
     public void run() {
 
-        for (int i = 0; i < 15; i++) {
-            char  c = tuberia.recoger();
-            System.out.println("se recogío: " + c);
+        for (int i = 0; i < 15; i++) { // se repite 15 veces para
+            char  c = tuberia.recoger(); // recoge un caracter
+            char c1 = tuberia.recoger();
+            System.out.println("se recogío: " + c+" y "+ c1);
             try {
-                sleep((int) (Math.random()*200));
+                sleep(3000);// lo duerme una cantidad de milisegundos al azar
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
