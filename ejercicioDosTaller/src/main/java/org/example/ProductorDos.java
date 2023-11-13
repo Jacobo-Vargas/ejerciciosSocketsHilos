@@ -14,7 +14,7 @@ public class ProductorDos extends Thread{
 
     @Override
     public void run() {
-        for (int i = 0; i < 15; i++) { // lanza 15 letras al azar
+        for (int i = 0; i < 11; i++) { // lanza 15 letras al azar
             char c = abecedario.charAt(escogerLetra());
             if(tuberia.getBuffer().contains(c)){ // verifica que la letra ya no este en el buffer de ser asi invalida ese ciclo y lo reinicia
                 i--;

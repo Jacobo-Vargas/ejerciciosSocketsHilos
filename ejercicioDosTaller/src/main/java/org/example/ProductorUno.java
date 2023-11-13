@@ -21,6 +21,11 @@ public class ProductorUno extends Thread{
             }else{
                 tuberia.lanzar(c); // lanzo un caracter
                 System.out.println("Se lanzo: " + c);
+                try {
+                    sleep((int) (Math.random() *100 ));
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
             }
         }
 

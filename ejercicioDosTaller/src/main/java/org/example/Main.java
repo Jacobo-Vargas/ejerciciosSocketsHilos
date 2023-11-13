@@ -6,11 +6,11 @@ public class Main {
 
         Tuberia t = new Tuberia();
         ProductorUno productorUno = new ProductorUno(t);
-      //  ProductorUno productorDos = new ProductorUno(t);
+        ProductorDos productorDos = new ProductorDos(t);
         Consumidor consumidor = new Consumidor(t);
 
         productorUno.start();
-       // productorDos.start();
+        productorDos.start();
         consumidor.start();
     }
 }
