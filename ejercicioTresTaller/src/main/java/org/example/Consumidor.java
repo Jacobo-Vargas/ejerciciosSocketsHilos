@@ -26,15 +26,21 @@ public class Consumidor extends Thread {
                 if(verificarLetra(c)){// se verifica si la letra esta contenida en la palabra que se desea armar
                     armarPalabra(c); // se asigna la letra a la posicion correspondiente
                     System.out.println(Arrays.toString(palabraArmada));
+                }
+                if(verificarLetra(c1)){// se verifica si la letra esta contenida en la palabra que se desea armar
+                    armarPalabra(c1); // se asigna la letra a la posicion correspondiente
+                    System.out.println(Arrays.toString(palabraArmada));
                 }else{
                     sobrantes.add(c); // si no hace parte se guarda en un array
+                    sobrantes.add(c1);
                 }
-                if(verificarPalabra()){
+                if(verificarPalabra()){ // si es true es por que se armo la palabra
                     bandera = false;
                     System.out.println("Se armó la palabra.");
+                    tuberia.palabraArmadaTuberia = palabraArmada;
                 }
+                sleep(100);
 
-                sleep(500);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }

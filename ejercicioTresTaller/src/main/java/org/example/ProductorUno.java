@@ -18,7 +18,6 @@ public class ProductorUno extends Thread {
                 char c = caracteres.charAt(random());
                 if(esVocal(c)){ // si es vocal enviela al buffer
                     if(tuberia.lanzar(c)){ // si lanzar retorna true detiene la ejecucion del while
-                        System.out.println("Se lanzo vocal: " + c);
                         bandera = false;
                     }
                     sleep(500);
@@ -36,7 +35,7 @@ public class ProductorUno extends Thread {
 
     public int random() {
         Random random = new Random();
-        return random.nextInt(37);
+        return random.nextInt(36);
     }
 
 }

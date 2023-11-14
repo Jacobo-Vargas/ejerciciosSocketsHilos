@@ -1,15 +1,11 @@
 package org.example;
 
-import java.util.ArrayList;
-
 public class Tuberia {
 
     char[] buffer = new char[12];
 
-    ArrayList<String> sobrantes = new ArrayList<>();
-
     String palabra = "uniquindio2023";
-    char[] palabraArmada = new char[14];
+    char[] palabraArmadaTuberia = new char[14];
 
     int posicion = 0;
     boolean lleno = false;
@@ -59,7 +55,7 @@ public class Tuberia {
     public boolean verificarPalabra() { // metodo para verificar si la palabra ya esta completa
         int verificacion = 0;
         for (int i = 0; i < 14; i++) {
-            if (palabraArmada[i] == palabra.charAt(i)) {
+            if (palabraArmadaTuberia[i] == palabra.charAt(i)) {
                 verificacion++;
             }
         }

@@ -18,10 +18,9 @@ public class ProductorTres extends Thread{
                 char c = caracteres.charAt(random());
                 if(esNumero(c)){ // si es numero enviela al buffer
                     if(tuberia.lanzar(c)){ // si lanzar retorna true detiene la ejecucion del while
-                        System.out.println("Se lanzo vocal: " + c);
                         bandera = false;
                     }
-                    sleep(2000);
+                    sleep(500);
                 }
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
@@ -35,6 +34,6 @@ public class ProductorTres extends Thread{
 
     public int random() {
         Random random = new Random();
-        return random.nextInt(37);
+        return random.nextInt(36);
     }
 }
